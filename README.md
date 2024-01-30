@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-    ![VimQu](https://vimqu.com/web/images/vimqu_org_400.png)
+	<img src="[https://i.stack.imgur.com/RJj4x.png](https://vimqu.com/web/images/vimqu_org_400.png)">
 </p>
 
 # VimQu PHP-SDK
