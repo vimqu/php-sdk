@@ -82,8 +82,8 @@ $hls = (new HlsOutput)
 $task->addOutput($hls)
 $task->send();
 ```
-**Available variants**:  240p, 480p, 720p, 1080p, 1440p, 2160p
-**Available filters**: clip, crop, transcribe, overlayImage
+- **Available variants**:  240p, 480p, 720p, 1080p, 1440p, 2160p
+- **Available filters**: clip, crop, transcribe, overlayImage
 
 ## Create Mpeg DASH
 ```php
@@ -101,8 +101,8 @@ $dash = (new DashOutput)
 $task->addOutput($dash);
 $task->send();
 ```
-**Available variants**:  240p, 360p 480p, 720p, 1080p, 1440p, 2160p
-**Available filters**: clip, crop, transcribe, overlayImage
+- **Available variants**:  240p, 360p 480p, 720p, 1080p, 1440p, 2160p
+- **Available filters**: clip, crop, transcribe, overlayImage
 
 ## Create Video Output
 ```php
@@ -119,9 +119,9 @@ $video = (new VideoOutput('h264', 'mp4'))
 $task->addOutput($video);
 $task->send();
 ```
-**Available containers**: mp4, webm, mov, mkv
-**Available video codecs**: h264, h265, vp8, vp9, prores
-**Available filters**: resize, clip, crop, transcribe, overlayImage
+- **Available containers**: mp4, webm, mov, mkv
+- **Available video codecs**: h264, h265, vp8, vp9, prores
+- **Available filters**: resize, clip, crop, transcribe, overlayImage
 
 ## Create Thumbnail with Exact Seconds
 ```php
@@ -135,8 +135,8 @@ $thumbnailBySeconds = (new ThumbnailBySeconds([4, 22, 400, 650]))
 $task->addOutput($thumbnailBySeconds);
 $task->send();
 ```
-**Available containers**: jpg, png, webp
-**Available filters**: resize
+- **Available containers**: jpg, png, webp
+- **Available filters**: resize
 
 ## Create Thumbnail with Number
 ```php
@@ -150,8 +150,8 @@ $thumbnailByNumber = (new ThumbnailByNumber(5, 'jpg'))
 $task->addOutput($thumbnailByNumber);
 $task->send();
 ```
-**Available containers**: jpg, png, webp
-**Available filters**: resize
+- **Available containers**: jpg, png, webp
+- **Available filters**: resize
 
 ## Create Thumbnail with Interval
 ```php
@@ -163,8 +163,8 @@ $thumbnailByInterval = (new ThumbnailByInterval(10, 'png'))
 $task->addOutput($thumbnailByInterval);
 $task->send();
 ```
-**Available containers**: jpg, png, webp
-**Available filters**: resize
+- **Available containers**: jpg, png, webp
+- **Available filters**: resize
 # Storage
 You can fetch all storages. [Details](https://doc.vimqu.com/category/storage-configuration)
 ```php
