@@ -1,4 +1,6 @@
-![VimQu](https://vimqu.com/web/images/vimqu_org_400.png)
+<p align="center" width="100%">
+    ![VimQu](https://vimqu.com/web/images/vimqu_org_400.png)
+</p>
 
 # VimQu PHP-SDK
 
