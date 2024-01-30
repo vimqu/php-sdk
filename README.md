@@ -1,4 +1,4 @@
-![VimQu](https://vimqu.com/web/images/vimqu_org.png  =300x)
+![VimQu](https://vimqu.com/web/images/vimqu_org_400.png)
 
 # VimQu PHP-SDK
 
