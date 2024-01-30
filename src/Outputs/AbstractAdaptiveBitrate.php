@@ -14,7 +14,7 @@ abstract class AbstractAdaptiveBitrate extends AbstractOutput
     public function getTypeSpecificConfig(): array
     {
         $config = [
-            'subtitle' => $this->subtitle,
+            'subtitles' => $this->subtitle,
             'filters' => [],
             'variants' => $this->variants
         ];

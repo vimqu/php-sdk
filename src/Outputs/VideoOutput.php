@@ -32,7 +32,7 @@ class VideoOutput extends AbstractOutput
         $config = [
             'container' => $this->container,
             'codec' => $this->codec,
-            'subtitle' => $this->subtitle,
+            'subtitles' => $this->subtitle,
             'filters' => []
         ];
 
