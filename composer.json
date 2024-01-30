@@ -1,0 +1,30 @@
+{
+    "name": "vimqu/php-sdk",
+    "type": "library",
+    "license": "MIT",
+    "description": "Cloud Video Transcoding. Create HLS, Mpeg Dash, Thumbnails and AI Generated Subtitle from video files",
+    "keywords": ["transcoding", "video transcode", "thumbnail", "subtitle", "hls", "dash", "adaptive bitrate"],
+    "autoload": {
+        "psr-4": {
+            "Vimqu\\Vimqu\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VimQu Development Team",
+            "email": "index@vimqu.com",
+            "homepage": "https://vimqu.com",
+            "role": "Software Development Team"
+        }
+    ],
+    "support": {
+        "email": "support@vimqu.com"
+    },
+    "minimum-stability": "dev",
+	"prefer-stable": true,
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": ">=6.5"
+    }
+}
