@@ -212,7 +212,7 @@ foreach($tasks as $task) {
     }
 }
 ```
-** See all methods **
+
 - [Vimqu\Vimqu\Dto\FileDto](https://github.com/vimqu/php-sdk/blob/main/src/Dto/FileDto.php)
 - [Vimqu\Vimqu\Dto\OutputDto](https://github.com/vimqu/php-sdk/blob/main/src/Dto/OutputDto.php)
 - [Vimqu\Vimqu\Dto\TaskDto](https://github.com/vimqu/php-sdk/blob/main/src/Dto/TaskDto.php)
