@@ -2,13 +2,13 @@
 
 namespace Vimqu\Vimqu\Outputs;
 
-trait HasTranscribe
+trait HasSubtitle
 {
-    protected bool $transcribe = false;
+    protected bool $subtitle = false;
 
-    public function transcribe(bool $transcribe): self
+    public function subtitle(bool $subtitle): self
     {
-        $this->transcribe = $transcribe;
+        $this->subtitle = $subtitle;
 
         return $this;
     }

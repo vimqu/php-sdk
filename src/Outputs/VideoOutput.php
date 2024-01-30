@@ -6,7 +6,7 @@ use Vimqu\Vimqu\Enums\OutputTypeEnum;
 
 class VideoOutput extends AbstractOutput
 {
-    use Resizable, HasOverlayImage, HasClip, HasCrop, HasTranscribe;
+    use Resizable, HasOverlayImage, HasClip, HasCrop, HasSubtitle;
 
     private string $codec = 'h264';
 
@@ -32,7 +32,7 @@ class VideoOutput extends AbstractOutput
         $config = [
             'container' => $this->container,
             'codec' => $this->codec,
-            'transcribe' => $this->transcribe,
+            'subtitle' => $this->subtitle,
             'filters' => []
         ];
 

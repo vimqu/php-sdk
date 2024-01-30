@@ -5,7 +5,7 @@ use InvalidArgumentException;
 
 abstract class AbstractAdaptiveBitrate extends AbstractOutput
 {
-    use HasClip, HasCrop, HasOverlayImage, HasTranscribe;
+    use HasClip, HasCrop, HasOverlayImage, HasSubtitle;
 
     protected array $variants = [];
 
@@ -14,7 +14,7 @@ abstract class AbstractAdaptiveBitrate extends AbstractOutput
     public function getTypeSpecificConfig(): array
     {
         $config = [
-            'transcribe' => $this->transcribe,
+            'subtitle' => $this->subtitle,
             'filters' => [],
             'variants' => $this->variants
         ];

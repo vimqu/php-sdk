@@ -4,7 +4,7 @@
 
 # VimQu PHP-SDK
 
-With this SDK you can change the container (mp4, mkv, mov, webm), codec (h264, h265, vp8, vp9, prores) and bitrate of video files. You can create **Adaptive Bitrate** videos. While doing this, you can **resize**, **crop**, **clip** operations on the video. You can create **thumbnails** from video file. Create transcribe files (**WebVTT**, **SRT**) in 94 languages (AI generated). Uploads the output files to the storage service of your choice. 
+With this SDK you can change the container (mp4, mkv, mov, webm), codec (h264, h265, vp8, vp9, prores) and bitrate of video files. You can create **Adaptive Bitrate** videos. While doing this, you can **resize**, **crop**, **clip** operations on the video. You can create **thumbnails** from video file. Create subtitle files (**WebVTT**, **SRT**) in 94 languages (AI generated). Uploads the output files to the storage service of your choice.
 
 Currently, VimQu is integrated with the following storage services:
 - AWS S3
@@ -39,7 +39,7 @@ $task = TaskManager::withToken('your_access_token')
 $video = (new VideoOutput('h264', 'mp4'))
     ->setStorage('your_storage_id', '/outputs/videos')
     ->setReferenceId('your_reference_id')
-    ->transcribe(true)
+    ->subtitle(true)
     ->resize(300, null)
     ->clip(2, duration: 45)
     ->crop(300, 300, 15, 15);
@@ -71,7 +71,7 @@ use Vimqu\Vimqu\Outputs\HlsOutput;
 $hls = (new HlsOutput)
     ->setStorage('your_storage_id', '/outputs/hls')
     ->setReferenceId('your_reference_id')
-    ->transcribe(true)
+    ->subtitle(true)
     ->clip(2, 45)
     ->crop(300, 300, 15, 15)
     ->overlayImage('https://your_overlay_image.png', 50, 50, 0, 20)
@@ -85,7 +85,7 @@ $task->addOutput($hls)
 $task->send();
 ```
 - **Available variants**:  240p, 480p, 720p, 1080p, 1440p, 2160p
-- **Available filters**: clip, crop, transcribe, overlayImage
+- **Available filters**: clip, crop, subtitle, overlayImage
 
 ## Create Mpeg DASH
 ```php
@@ -94,7 +94,7 @@ use Vimqu\Vimqu\Outputs\DashOutput;
 $dash = (new DashOutput)
     ->setStorage('your_storage_id', '/outputs/dash')
     ->setReferenceId('your_reference_id')
-    ->transcribe(true)
+    ->subtitle(true)
     ->clip(2, 45)
     ->crop(300, 300, 15, 15)
     ->addVariant('720p')
@@ -104,7 +104,7 @@ $task->addOutput($dash);
 $task->send();
 ```
 - **Available variants**:  240p, 360p 480p, 720p, 1080p, 1440p, 2160p
-- **Available filters**: clip, crop, transcribe, overlayImage
+- **Available filters**: clip, crop, subtitle, overlayImage
 
 ## Create Video Output
 ```php
@@ -113,7 +113,7 @@ use Vimqu\Vimqu\Outputs\VideoOutput;
 $video = (new VideoOutput('h264', 'mp4'))
     ->setStorage('your_storage_id', '/outputs/videos')
     ->setReferenceId('your_reference_id')
-    ->transcribe(true)
+    ->subtitle(true)
     ->resize(300, null)
     ->clip(2, duration: 45)
     ->crop(300, 300, 15, 15);
@@ -123,7 +123,7 @@ $task->send();
 ```
 - **Available containers**: mp4, webm, mov, mkv
 - **Available video codecs**: h264, h265, vp8, vp9, prores
-- **Available filters**: resize, clip, crop, transcribe, overlayImage
+- **Available filters**: resize, clip, crop, subtitle, overlayImage
 
 ## Create Thumbnail with Exact Seconds
 ```php
@@ -259,9 +259,9 @@ You can cut the video at specific points.
 |  coordinate_x | NO | int | null |
 |  coordinate_y | NO | int | null |
 
-## transcribe
-You can use it to create a transcript. Your WebVTT and SRT files will be in targetPath root directory. You gave this directory in the setStorage method.
+## subtitle
+You can use it to create a transcript. Your vtt and srt files will be in targetPath root directory. You gave this directory in the setStorage method.
 
 |  Parameter  |  Nullable  | Type  | Default Value  |
 | ------------ | ------------ | ------------ | ------------ |
-|  transcribe | NO | bool | false |
+|  subtitle | NO | bool | false |
