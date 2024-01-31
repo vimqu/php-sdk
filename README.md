@@ -81,10 +81,10 @@ $hls = (new HlsOutput)
     ->addVariant('1080p');
 
 // $task is instance of TaskManager, we created it before.
-$task->addOutput($hls)
+$task->addOutput($hls);
 $task->send();
 ```
-- **Available variants**:  240p, 480p, 720p, 1080p, 1440p, 2160p
+- **Available variants**:  240p, 360p, 480p, 720p, 1080p, 1440p, 2160p
 - **Available filters**: clip, crop, subtitle, overlayImage
 
 ## Create Mpeg DASH
@@ -142,7 +142,7 @@ $task->send();
 
 ## Create Thumbnail with Number
 ```php
-use Vimqu\Vimqu\Outputs\ThumbnailBySeconds;
+use Vimqu\Vimqu\Outputs\ThumbnailByNumber;
 
 $thumbnailByNumber = (new ThumbnailByNumber(5, 'jpg'))
     ->setStorage('your_storage_id', '/outputs/thumbnails/number')
@@ -157,6 +157,8 @@ $task->send();
 
 ## Create Thumbnail with Interval
 ```php
+use Vimqu\Vimqu\Outputs\ThumbnailByInterval;
+
 $thumbnailByInterval = (new ThumbnailByInterval(10, 'png'))
     ->setStorage('your_storage_id', '/outputs/thumbnails/interval')
     ->setReferenceId('your_reference_id')
