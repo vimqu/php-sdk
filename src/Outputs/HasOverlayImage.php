@@ -18,10 +18,17 @@ trait HasOverlayImage
         $this->overlayImage = [
             'url' => $url,
             'coordinate_x' => $coordinateX,
-            'coordinate_y' => $coordinateY
+            'coordinate_y' => $coordinateY,
+            'between_seconds' => null
         ];
 
-        $this->overlayImage['between_seconds'] = sprintf('%s-%s', $firstSecond, $lastSecond);
+        if (is_int($firstSecond) && is_int($lastSecond)) {
+            $seconds = sprintf('%s-%s', $firstSecond, $lastSecond);
+        } else {
+            $seconds = null;
+        }
+
+        $this->overlayImage['between_seconds'] = $seconds;
 
         return $this;
     }

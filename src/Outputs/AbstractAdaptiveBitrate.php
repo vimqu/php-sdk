@@ -9,7 +9,7 @@ abstract class AbstractAdaptiveBitrate extends AbstractOutput
 
     protected array $variants = [];
 
-    protected const ALLOWED_SCALES = ['240p', '480p', '720p', '1080p', '1440p', '2160p'];
+    protected const ALLOWED_SCALES = ['240p', '360p', '480p', '720p', '1080p', '1440p', '2160p'];
 
     public function getTypeSpecificConfig(): array
     {
